@@ -5,15 +5,16 @@
           <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
           <meta http-equiv="X-UA-Compatible" content="IE=EDGE">      
               
-         <!--links to css files or font files-->     
-         <link rel="stylesheet" type='text/css' href="css/framework.css">    
+         <!--links to styles-->   
+ <!--        <link rel="stylesheet" type='text/css' href="css/framework.css">   -->
+          <link rel="stylesheet" type='text/css' href="css/bootstrap.min.css">
        <link rel="stylesheet" type='text/css' href="css/style.css">    
 
     </head>        
-        
 <body>
+    <div class='container-fluid'>
  <div class='row'>
-     <div class='col-12 border'>
+     <div class='.col-md-12border'>
                 <header id='header'>
             
                 <h1>Web Ninja</h1>
@@ -25,12 +26,12 @@
   <!--End Header-->
     </div>  
     <div class='row'>
-        <div class='col-12 border'>
+        <div class='.col-md-12 border'>
               <nav id='nav'>
                 <ul class='menu'>
                     <button>Schedule</button>
-                    <button>CSS</button>
-                    <button>HTML</button>
+                    <button data-toggle="modal" data-target="#css3_modal">CSS</button>
+                    <button data-toggle="modal" data-target="#html5_modal">HTML</button>
                     <button>Responsive Design</button>
                 </ul>
           </nav> 
@@ -38,10 +39,10 @@
     </div>         
   <!--End Menu-->      
          <div class='row'>
-             <div class='col-8 border'>
+             <div class='.col-md-8 border'>
                 <div id="main-content-wrapper">
                  <div class="side-by-side">
-                 <section class="image-content">
+                 <section class="image-content col-6">
                      
                     <img src="http://thearcofmass.org/wp-content/uploads/2014/03/face.jpg">
                      <h4>
@@ -70,7 +71,7 @@
              </div>
             </div>   
             <!--end main-content-wrapper-->
-           <div class='col-4 border'>      
+           <div class='.col-md-4 border'>      
                 <div id="aside-content-wrapper">
                  <aside id='aside-right'>
                    <h3>Latest Work</h3> 
@@ -92,30 +93,80 @@
                 </div>     
                            
                         
-    <div id='favorite-sites' class="row">
-   
-        <div class='col-4 border'>
-            <img src='images/fbook.jpg'>
+    <div id='favorite-sites'>  
+        <div class="row">
+        <div class='.col-md-4 border'>
+            <img class="img-responsive"src='images/fbook.jpg'>
         </div>    
-        <div class='col-4 border'>
-            <img src='images/gplus.png'>
+        <div class='.col-md-4 border'>
+            <img class="img-responsive" src='images/gplus.png'>
         </div>    
-        <div class='col-4 border'>
-            <img src='images/twitter.jpg'>
-        </div>                     
+        <div class='.col-md-4 border'>
+            <img class="img-responsive" src='images/twitter.jpg'>
+        </div> 
+        </div>    
                             
   </div>           
     <div class="row">
-            <div class='col-12 border'>
+            <div class='.col-md-12 border'>
                 <footer><h1>Footy</h1></footer>                    
             </div>
     </div>              
 
+ </div> 
+    <!--End Container Div-->
+    <!-- Modal-HTML5 -->
+<div class="modal fade" id="html5_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class='image-modal'><img src="images/html5.png"></div>
+          <br>
+          <br>
+          <p><strong>HTML5</strong> is the latest evolution of the standard that defines HTML. The term represents two different concepts: It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows more diverse and powerful Web sites and applications.</p>
+          <br>
+          <p>Source:</p><span><a href=https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5>click</a></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Modal-CSS3 -->
+<div class="modal fade" id="css3_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <div class='img-modal'>
+          <div class='image-modal'> <img src="images/css3.png"></div>
+              </div>
+          <br>
+          <p><strong>CSS3</strong> is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1. It brings a lot of long-awaited novelties, like rounded corners, shadows, gradients, transitions or animations, as well as new layouts like multi-columns, flexible box or grid layouts.</p>
+          <br>
+          <p>Source: </p><span><a https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3></a></span>
        
-       <script src="js/main.js"></script>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <script src="js/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/main.js"></script>  
 
 
     
     
     
-</html>

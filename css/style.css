@@ -209,3 +209,15 @@ footer > h1 {
     max-width: 960px;
     margin: 0 auto;
 }
+
+/*Bootsrap Related*/
+.container-fluid {
+    padding: 0;
+}
+.img-modal {
+    text-align: center;
+}
+
+#favorite-sites > .row > .col-md-4 > img {
+        margin: 0 auto;
+}
